@@ -1,16 +1,308 @@
 <!DOCTYPE html>
-<html>
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="test.css">
-<script src="test.js"></script>
-
-<title>Šī ir mana lapa</title>
+    <title>Bootstrap mājasdarbs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <div>
+	<center>
+	<!-- Navigācijas bārs -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <img src="https://i.pinimg.com/originals/6e/de/9a/6ede9a835035ba5d9d43c510e63cfb5d.jpg" width="40" height="40" alt="Bootstrap">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <!--Popover-->
+                <a class="nav-link" href="#" title="MD jārealizē šādas Bootstrap iespējas" data-toggle="popover" data-placement="top" data-content="rows, jumbotron, grid, navigation, special fonts, buttons, forms, tables, tabs, pills, accordian, scrollspy afix, tooltip, popover, modal.">Lapas iespējas</a>
+                <script>
+                    $(document).ready(function () {
+                        $('[data-toggle="popover"]').popover();
+                    });
+                </script>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Informācija</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/History_of_BMW">Vēsture</a>
+                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/BMW">Par BMW</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+	</center>
+	</div>
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <center>
+            <h1>Jumbotron piemērs</h1>
+            <p class="bg-info">Šeit tiek izmantots "Jumbotron" un tekstam "bg-info".</p>
+        </center>
+    </div>
+    <!-- Google search -->
+    <script>
+        var domainroot = "https://www.google.com"
+        function Gsitesearch(curobj) { curobj.q.value = "" + " " + curobj.qfront.value }
+    </script>
+    <!-- Forms -->
+    <form class="search navbar-form ml-auto" action="http://www.google.com/search" method="get" role="search" onSubmit="Gsitesearch(this)">
+        <div class="input-group">
+            <input name="q" type="hidden" />
+            <input class="form-control" name="qfront" type="search" required class="searchField" placeholder="Google Site Search" maxlength="50" title="Google meklētājs" />
+            <!-- Tooltip -->
+            <button class="btn btn-success btn-inline" type="submit" data-toggle="tooltip" title="Ievadiet, ko vēlaties atrast, un nospiediet Meklēt!">Meklēt</button>
 
-<h1>Sveiki!</h1>
-<p>Es esmu Srteterāhgfghe4t3ra</p>
-<button id="poga" type="button" onclick="myFunction()"> uzzināt vairāk pddddddddddddddddddddddddddaar mani </button>
+            <script>
+                $(document).ready(function () {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+            </script>
+        </div>
+    </form>
+    <div>
+        <center>
+            <p>Raksti, lai meklētu, kad gatavs - Spied ENTER!!!</p>
+        </center>
+        <div class="container">
+            <!-- Navigation pills -->
+            <ul class="nav nav-pills" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" href="#home">BMW 3, 5, 7 series</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#menu1">Grid</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#menu2">Tabula</a>
+                </li>
+            </ul>
+            <!-- Tabs -->
+            <div class="tab-content">
+                <div id="home" class="container tab-pane active">
+                    <br>
+                    <!-- Accordion -->
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <!-- Button -->
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        2020. gads
+                                    </button>
+                                </h5>
+                            </div>
+                            <!--Carousel-->
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div id="carous" class="carousel slide" data-ride="carousel">
+                                        <ul class="carousel-indicators">
+                                            <li data-target="#carous" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carous" data-slide-to="1"></li>
+                                            <li data-target="#carous" data-slide-to="2"></li>
+                                        </ul>
+                                        <div class="carousel-inner">
+                                            <center>
+                                                <div class="carousel-item active">
+                                                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2020-bmw-m340i-v-2020-genesis-g70-3p3t-1016-hdr-1571838328.jpg?crop=0.614xw:0.751xh;0.0865xw,0.249xh&resize=640:*" width="700" height="500">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="https://www.driving.co.uk/s3/st-driving-prod/uploads/2017/03/P90247628_highRes_bmw-520d-m-sport.jpg" width="800" height="500">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bmw-7-series-lead-1547592394.jpg" width="800" height="500">
+                                                </div>
+                                            </center>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carous" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carous" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Modal-->
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        BMW 3 series
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <!-- Button (open Modal) -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                            Atvēr rakstu.
+                                        </button>
+                                        <div class="modal" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" align="right">About BMW 3 series</h4>
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        In the automotive woodland, the 3 Series is one of the great oaks. You can name them: Golf, 911, Range Rover, S-Class. And 3 Series. They’re what define the landscape. The unchanging cars, the ones by which we all orient ourselves.
+                                                        Through decades of careful evolution, they have all become standards against which everything else vaguely similar is inevitably measured. The 3 Series is also central to what the company is all about. It accounts for one in five of all the BMWs sold worldwide (and that’s before you add the 4 Series)
+                                                        So if you’re BMW, you don’t cock about with the 3 Series
+                                                        Sure enough, after 40 years this new generation declines to ambush us with any great surprises. It’s still a sporty, smart, respectable, comforting prospect. That’s despite the fact its component parts are almost entirely different from the last one. Pretty much all that’s been handed on from before are the engines and transmissions. But we defy you to find much wrong with that particular inheritance. And anyway they’ve been improved.
+                                                        One of the aims for the designers was, ‘don’t make it look like a 5 Series’, which is good because when I saw an old 3 or an old 5, especially as Tourings, I had a job to tell which it was.
+                                                        The new coachwork has very taut metal along the sides, and subtle but sharp creases, and holds its bonnet low over the wheels. It’s one of the few recent BMWs without outlet vents behind the front arches. In this car they would have made no difference, says the designer. Another easy spot: the main side crease no longer runs through the door handles.
+                                                        The body is stiffer and larger now. The suspension principles, the seats, electronics and so on cascade down from the bigger cars BMW has launched in the past couple of years. The suspension and drivetrain use more aluminium than before, and the bonnet and front wings are aluminium too. Overall the weight saving is beyond 50kg in most models, and it’s more slippery through the air too.
+                                                        The 320d now has twin-sequential turbocharging with VGT for the bigger of the two puffers. Thanks to that and loss of weight and drag, an automatic 320d will get to 62mph in under seven seconds, but the spec says CO2 emissions of 110g/km.
+                                                        The other end of the scale, at least until the M3 arrives in a pall of tyre-smoke, is a M340i xDrive. This one is a significant step ahead from the old 340i. Power is 370bhp, and there’s four-wheel drive plus M mods to the chassis, brakes and styling. This is one part of the 3 Series range where it wasn’t the de facto standard. In power and four-wheel-drive-ness, this is BMW playing catch-up with the Audi S4 and Mercedes-AMG C43. And as we’ll see, doing a stonking good job of it.
+                                                        Overall the 3 Series body is almost 8cm longer, so it’s hard to call it compact now. The width is up a bit, the front track by 4cm. Careful not to injure those wheels in a width restrictor. Given that swelling of dimensions, the increased cabin and boot space don’t look all that clever. But given the weight reduction they do.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        The Top Gear car review
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+                                        <ul>
+                                            <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                                                <ul class="navbar-nav">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#section1">Driving</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#section2">On the inside</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#section3">Owning</a>
+                                                    </li>
+
+                                                </ul>
+                                            </nav>
+
+                                            <div id="section1" class="container-fluid" style="padding-top:70px;padding-bottom:70px">
+                                                <h1>Driving</h1>
+                                                <!-- Font -->
+                                                <p align="justify">
+                                                    Back to our great oak theory. The 3 Series is the driver’s saloon. Except that during the F30’s life, other saplings rapidly grew to match it. The Jaguar XE’s powertrains are a facepalm but it’s more composed than the BMW when twisty roads are bumpy, as they typically are.
+                                                    And the Alfa Giulia is just fuller of competence and joy than the BMW pretty well everywhere. BMW had to do some pretty serious tree surgery. (OK quit with the overstretched metaphors already.)
+                                                    First mile down the road, the new G20 3 Series jabs you in the chest and tells you it’s sporty. The ride is notably taut. The steering’s sharp and accurate, without being nervously direct.
+                                                    The response rates from steering, roll and yaw are deliciously matched, so you peel it into a bend almost without thinking, placing it just-so on the road. The Sport chassis option gets firmer bushes for more precision, and progressive-rate steering that’s useful in hairpins.
+                                                    Lean harder and it refuses to understeer, subtly squatting onto its thighs and swivelling around and out of the curve. Damping is solidly disciplined, and it feels light without any sense of fragility.
+                                                    Using up the grip will be a rare event. That said, if it’s wet the rear-drive versions, even the 320d, are up for a neat tail-slide if you’ve tapped the DSC button into its mid setting.
+                                                    It’s not a sports car, but among normal-peoples’ saloons you won’t find one that’s much more fun.
+                                                    But the steering isn’t perfect. It’s disturbed and knocked off course by bumps, in straights as well as bends. This was always the deficiency of the old one, and it’s better now but not as well-suppressed as the Jag or Alfa, never mind the deliberately isolating Mercedes and Audi.
+                                                    As to the ride… wow, that’s really a bit punchy. Flat-through-the-esses competence is all very well, but common observation says a 3 Series is going to spend most of its time in more constrained circs. There’s little difference between the lowered sport version or the standard setup. A new kind of dampers move more easily in the middle of the stroke than the ends, but even so, over small corrugations as well as big bumps, the suspension never relaxes. Or lets you.
+                                                    The final option, an M Sport Plus package, gives adaptive damping with 19-inch wheels. We haven’t tried it but BMW says the former compensates for the punishment of the latter. It also adds an M Sport e-differential and upgraded brakes.
+                                                    Still, as a long-distance car the 3 Series does everything to compensate for that ride. Quietness and refinement are first rate, especially from the engine and wind noise. They filled the screen pillars with foam and used acoustically insulating glass. Motorway lane stability is fine too.
+                                                    We’ve started with the chassis because with BMW, powertrain excellence is pretty much a given. This time too. The 320d is strong for the type, but calm. It’s still a four-cylinder diesel, so you’ve still got to get your fun from the cornering not the engine. At least it’s muscly enough to let that happen.
+                                                    The 330i petrol is a bit of a peach. For a four-cylinder it’s remarkably smooth and blissfully keen to rev out to 6,800rpm. It’s a 5.8-sec car to 62mph. Even more than in the diesel, the eight-speed transmission shows it to its very best advantage. There’s no significant torque-converter slip, and the changes are super-snappy yet perfectly smooth with it.
+                                                    But the 330i isn’t a six-cylinder. The M340i is. We tried that at a track. A place that shouldn’t suit an AWD saloon, but it does. The newly revised engine kicks out 370bhp, putting it conveniently alongside S4, C43 AMG and Stinger GTS. It revs to 7,000 and sounds gorgeous.
+                                                    This has all the M Sport Plus chassis goodies listed above, and an electronically controlled centre diff that’s been programmed, in Sport mode, to chuck the rear tyres all the power they can handle. And quite a bit more for luck, provided the brain sees you’re up with the steering correction. It lets you play the fool, but then protects you from your foolishness.
+                                                    It might be a driver’s car but of course you can spec a pack of driver aids. When you choose to use them, you’re well supported by the speed and lane control. That’s nothing special for this class of saloon. Better than that, it’s pretty easy to configure them to do what you want at the time you want it. Especially with the head-up display it’s also easy to see what’s activated and what’s not.
+                                                    That reduces a common problem with driver aids, that they intervene when you weren’t expecting them to. Or, worse, you neglect to do what you should because you were expecting it to be done for you.
+                                                </p>
+
+                                            </div>
+                                            <div id="section2" class="container-fluid" style="padding-top:70px;padding-bottom:70px">
+                                                <h1>On the inside</h1>
+                                                <p align="justify">
+                                                    The new 3 is emphatically better-furnished than the old one, but it hasn’t moved ahead as fast as the best opposition. Oh it’s modern alright, with high-def screens all over the place and ambient lighting strips and lots of metallic highlights. But it’s not as plush or as lovingly crafted as an Audi or Mercedes. Just a little cold-looking.
+                                                    It’s certainly big enough. The longer wheelbase serves up adult-size rear legroom. Behind that is a bounteous boot, with folding seat-backs if you need more. This could be a family car, though you’d probably wait a bit for the Touring, which is only a matter of months behind the saloon.
+                                                    As rivals increasingly migrate to touchscreens and swipe pads, the good old iDrive rotary controller feels more and more like coming home. You can use it without looking down, even when the car is bouncing along.
+                                                    Oh there are innumerable other ways to interact, including a touchscreen. Plus a full Alexa-style ‘connected personal assistant’ by voice. Which sometimes actually works. Sometimes.
+                                                    The base model gets hardware instrument dials. We asked the project director if they are actually less expensive to manufacture than a virtual screen setup, and he said not really. It’s all about giving the sales department an upgrade to charge for.
+                                                    So the upper-spec versions get a virtual driver’s cluster, plus a 10.25-inch display. As we’ve said before, BMW’s virtual dials are long on information and short on legibility.
+                                                </p>
+                                            </div>
+                                            <div id="section3" class="container-fluid" style="padding-top:70px;padding-bottom:70px">
+                                                <h1>Owning</h1>
+                                                <p align="justify">
+                                                    BMW’s EfficientDynamics is more than just an ugly tag. Anywhere you look in the 3 Series range you’ll find a remarkable stretch between performance on one hand and economy/CO2 on the other.
+                                                    If company-car tax is critical, wait for the 330e PHEV. The electric range is claimed at 37 miles from a substantial 12.2kWh battery. When the engine and motor work together it’s faster than the petrol 330i. The battery is under the seat and the fuel tank (only 40 litres) is over the suspension, so there’s still a folding rear seat and it’ll be available as a Touring too.
+                                                    The new 3 also has competitive equipment. The ‘base’ is SE, rolling on 17-inch wheels. It has adaptive LED headlights, park distance control all-round and a reversing camera, and cruise. It has the actual hardware instrument set, with an 8.8-inch central display. That’s as big as the top option on the old 3 Series, itself a very clear useable and useful system with full traffic info and CarPlay too.
+                                                    There’s a Sport trim with 18s, fogs, and some other exterior embellishments and sensibly a bigger fuel tank on the 320d. The seats on this are the heated, sports, leathered kind. That’s a £1,400 bundle and you can’t see many people denying themselves.
+                                                    Another £1,500 brings M Sport, with different 18s, a body kit and the double-screen cockpit.
+                                                    The M Sport Plus package of high-performance brakes, suspension, adaptive dampers and rear e-diff is £2,200 on top of M Sport. Probably overkill for your 320d eh.
+                                                    Three years’ servicing starts at £399 for 36k miles. The warranty is also three years but unlimited mileage.
+                                                </p>
+                                        </ul>
+                                    </body>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu1" class="container tab-pane fade">
+                    <br>
+                    <!-- Grid -->
+                    <h3>Grid</h3>
+                    <p>Divas dažāda platuma kolonnas.</p>
+                    <!-- Rows -->
+                    <div class="row">
+                        <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+                        <div class="col-sm-8" style="background-color:lavenderblush;">.col-sm-8</div>
+                    </div>
+                    <br>
+                    <p>Trīs vienāda platuma kolonnas.</p>
+                    <div class="row">
+                        <div class="col" style="background-color:lavender;">.col</div>
+                        <div class="col" style="background-color:orange;">.col</div>
+                        <div class="col" style="background-color:lavender;">.col</div>
+                    </div>
+                </div>
+                <div id="menu2" class="container tab-pane fade">
+                    <br>
+                    <div class="container">
+                        <!-- Tables -->
+                        <h3>Tabula</h3>
+                        <table class="table table-light table-hover">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Sērija</th>
+                                    <th>Modelis</th>
+                                    <th>Cena</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3. sērija</td>
+                                    <td>320i</td>
+                                    <td>38 900 eiro</td>
+                                </tr>
+                                <tr>
+                                    <td>5. sērija</td>
+                                    <td>520i</td>
+                                    <td>42 900 eiro</td>
+                                </tr>
+                                <tr>
+                                    <td>7. sērija</td>
+                                    <td>745Le xDrive</td>
+                                    <td>110 900 eiro</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
-</html>
